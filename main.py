@@ -1,12 +1,12 @@
 # list = [1, 5, 6, 11, 2, 15]
 
-# print("length of list:", len(list)) # 6
+# print("length of list:", len(list))
 
-# print("1st element in list:", list[0]) # 1
+# print("1st element in list:", list[0])
 
-# print("2nd element in list:", list[1]) # 5
-# print("3rd element in list:", list[2]) # 6
-# # # out of bounds
+# print("2nd element in list:", list[1])
+# print("3rd element in list:", list[2])
+# # out of bounds
 # print("7th element in list:", list[6])
 
 # using a loop
@@ -140,12 +140,13 @@ while (y < height):
     g = int(koalaImage[y][x][1])
     b = int(koalaImage[y][x][2])
 
-    # if (g + 20 > 255):
-    #   g = 255
-    # else:
-    #   g = g + 20
+    ####### code here #######
+  
+    
 
-    outputImage[y][x] = [r, g, b]
+    #########################
+    outputImage[y][x] = [max(0, min(r, 255)), max(0, min(g, 255)), max(0, min(b, 255))]
+
     x += 1
   y += 1
 
